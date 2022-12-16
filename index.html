@@ -1,0 +1,3293 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>c08c92a94236466cab0fb9542b961da9</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<section id="final-project" class="cell markdown">
+<h1>Final Project</h1>
+<h2 id="by-rohan-ondkar-naveen-harish-melvin-gonsalves">By: Rohan Ondkar, Naveen Harish, Melvin Gonsalves</h2>
+</section>
+<section id="part-1-why-are-we-collecting-this-data" class="cell markdown">
+<h1>Part 1: Why are we collecting this data?</h1>
+<p>Early education is important for a number of reasons. First and foremost, young children are at a critical stage in their development, and early education can play a crucial role in shaping their future. By providing children with a strong foundation in key areas such as language, literacy, and mathematics, early education can help to prepare them for success in school and in life.</p>
+<p>Another reason why early education is important is that it can help to narrow the achievement gap that often exists between children from different backgrounds. Children who receive high-quality early education are more likely to do well in school and go on to graduate from high school and attend college. This can help to break the cycle of poverty that affects many families and communities.</p>
+<p>One major factor contributing to unequal education in the US is the unequal distribution of funding for schools. In many states, schools are funded primarily through property taxes, which means that schools in more affluent areas tend to have more funding than those in poorer areas. This leads to a situation where schools in wealthier neighborhoods are able to offer more advanced classes, extracurricular activities, and resources such as computers and modern facilities, while schools in poorer areas may struggle to provide even basic education.</p>
+<p>This is exactly what we will be trying to to prove throughout this tutorial. Our focus is to confirm whether education inequality is reflected by national math and reading examination differences. One approach you could take is to collect data on national math and reading exam scores, and compare them across different demographic groups. This could include looking at factors such as race, income, and geographic location, to see if there are any significant differences in exam scores</p>
+<p>Once we have collected and analyzed this data, we can then use it to confirm whether education inequality is reflected by national math and reading examination differences, and identify the factors that may be contributing to these differences. This information can then be used to inform efforts to address education inequality and improve early education for all students.</p>
+<p>We will be using math and read as the subjects to look into because they are the most consistent and are taught at all school at an elementary level. It is common to use national math and reading exam scores as a way to measure educational achievement and inequality, because these subjects are considered fundamental to a student's overall educational experience. Math and reading skills are essential for success in many other academic subjects, as well as in daily life, and they are often included in standardized tests as a way to assess a student's overall academic performance. Additionally, math and reading exam scores can provide a more objective measure of educational achievement and inequality than other indicators, such as graduation rates or self-reported survey data. This can make them a useful tool for identifying and addressing disparities in educational opportunities and outcomes.</p>
+<p>Our null hypothesis is that none of the factors mentioned above do not impact children at an elementary level by state. Our null hypothesis is that none of the factors mentioned above do impact children at an elementary level by state.</p>
+</section>
+<section id="part-2-data-managementrepresentation" class="cell markdown">
+<h1>Part 2: Data Management/Representation</h1>
+<p>First we have to import the necessary libraries that we need to load the dataset. We are using pandas, numpy, and matplotlib.pyplot.<br> Pandas is used for the DataFrame object since that is an easy way to store tabular data. <br> Numpy is used for its math functionality.<br> Mathplotlib.pyplot is used to plot graphs demonstrating relationships between variables in our data.</p>
+</section>
+<div class="cell code" data-execution_count="3">
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas </span></code></pre></div>
+</div>
+<div class="cell markdown">
+<p>Getting the csv file and displaying it. Found at <a href="https://www.kaggle.com/datasets/noriuk/us-education-datasets-unification-project" class="uri">https://www.kaggle.com/datasets/noriuk/us-education-datasets-unification-project</a></p>
+</div>
+<div class="cell code" data-execution_count="4">
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>school <span class="op">=</span> pd.read_csv(<span class="st">&quot;education_states.csv&quot;</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># display first few rows</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>school</span></code></pre></div>
+<div class="output execute_result" data-execution_count="4">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PRIMARY_KEY</th>
+      <th>STATE</th>
+      <th>YEAR</th>
+      <th>ENROLL</th>
+      <th>TOTAL_REVENUE</th>
+      <th>FEDERAL_REVENUE</th>
+      <th>STATE_REVENUE</th>
+      <th>LOCAL_REVENUE</th>
+      <th>TOTAL_EXPENDITURE</th>
+      <th>INSTRUCTION_EXPENDITURE</th>
+      <th>...</th>
+      <th>G08_HI_A_READING</th>
+      <th>G08_HI_A_MATHEMATICS</th>
+      <th>G08_AS_A_READING</th>
+      <th>G08_AS_A_MATHEMATICS</th>
+      <th>G08_AM_A_READING</th>
+      <th>G08_AM_A_MATHEMATICS</th>
+      <th>G08_HP_A_READING</th>
+      <th>G08_HP_A_MATHEMATICS</th>
+      <th>G08_TR_A_READING</th>
+      <th>G08_TR_A_MATHEMATICS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1992_ALABAMA</td>
+      <td>ALABAMA</td>
+      <td>1992</td>
+      <td>NaN</td>
+      <td>2678885.0</td>
+      <td>304177.0</td>
+      <td>1659028.0</td>
+      <td>715680.0</td>
+      <td>2653798.0</td>
+      <td>1481703.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1992_ALASKA</td>
+      <td>ALASKA</td>
+      <td>1992</td>
+      <td>NaN</td>
+      <td>1049591.0</td>
+      <td>106780.0</td>
+      <td>720711.0</td>
+      <td>222100.0</td>
+      <td>972488.0</td>
+      <td>498362.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1992_ARIZONA</td>
+      <td>ARIZONA</td>
+      <td>1992</td>
+      <td>NaN</td>
+      <td>3258079.0</td>
+      <td>297888.0</td>
+      <td>1369815.0</td>
+      <td>1590376.0</td>
+      <td>3401580.0</td>
+      <td>1435908.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1992_ARKANSAS</td>
+      <td>ARKANSAS</td>
+      <td>1992</td>
+      <td>NaN</td>
+      <td>1711959.0</td>
+      <td>178571.0</td>
+      <td>958785.0</td>
+      <td>574603.0</td>
+      <td>1743022.0</td>
+      <td>964323.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1992_CALIFORNIA</td>
+      <td>CALIFORNIA</td>
+      <td>1992</td>
+      <td>NaN</td>
+      <td>26260025.0</td>
+      <td>2072470.0</td>
+      <td>16546514.0</td>
+      <td>7641041.0</td>
+      <td>27138832.0</td>
+      <td>14358922.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1710</th>
+      <td>2019_VIRGINIA</td>
+      <td>VIRGINIA</td>
+      <td>2019</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>247.0</td>
+      <td>278.0</td>
+      <td>286.0</td>
+      <td>315.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>269.0</td>
+      <td>293.0</td>
+    </tr>
+    <tr>
+      <th>1711</th>
+      <td>2019_WASHINGTON</td>
+      <td>WASHINGTON</td>
+      <td>2019</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>248.0</td>
+      <td>267.0</td>
+      <td>285.0</td>
+      <td>315.0</td>
+      <td>237.0</td>
+      <td>259.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>263.0</td>
+      <td>292.0</td>
+    </tr>
+    <tr>
+      <th>1712</th>
+      <td>2019_WEST_VIRGINIA</td>
+      <td>WEST_VIRGINIA</td>
+      <td>2019</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>249.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1713</th>
+      <td>2019_WISCONSIN</td>
+      <td>WISCONSIN</td>
+      <td>2019</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>251.0</td>
+      <td>273.0</td>
+      <td>277.0</td>
+      <td>294.0</td>
+      <td>253.0</td>
+      <td>267.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>268.0</td>
+      <td>276.0</td>
+    </tr>
+    <tr>
+      <th>1714</th>
+      <td>2019_WYOMING</td>
+      <td>WYOMING</td>
+      <td>2019</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>254.0</td>
+      <td>274.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>243.0</td>
+      <td>258.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>274.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>1715 rows × 266 columns</p>
+</div>
+</div>
+</div>
+<div class="cell markdown">
+<p>PRIMARY_KEY is not needed for this table. We have STATE and YEAR, so we do not need PRIMARY_KEY because it provides no new information</p>
+</div>
+<div class="cell code" data-execution_count="5">
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>school <span class="op">=</span> school.drop(columns<span class="op">=</span>[<span class="st">&#39;PRIMARY_KEY&#39;</span>])</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>school</span></code></pre></div>
+<div class="output execute_result" data-execution_count="5">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>STATE</th>
+      <th>YEAR</th>
+      <th>ENROLL</th>
+      <th>TOTAL_REVENUE</th>
+      <th>FEDERAL_REVENUE</th>
+      <th>STATE_REVENUE</th>
+      <th>LOCAL_REVENUE</th>
+      <th>TOTAL_EXPENDITURE</th>
+      <th>INSTRUCTION_EXPENDITURE</th>
+      <th>SUPPORT_SERVICES_EXPENDITURE</th>
+      <th>...</th>
+      <th>G08_HI_A_READING</th>
+      <th>G08_HI_A_MATHEMATICS</th>
+      <th>G08_AS_A_READING</th>
+      <th>G08_AS_A_MATHEMATICS</th>
+      <th>G08_AM_A_READING</th>
+      <th>G08_AM_A_MATHEMATICS</th>
+      <th>G08_HP_A_READING</th>
+      <th>G08_HP_A_MATHEMATICS</th>
+      <th>G08_TR_A_READING</th>
+      <th>G08_TR_A_MATHEMATICS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>ALABAMA</td>
+      <td>1992</td>
+      <td>NaN</td>
+      <td>2678885.0</td>
+      <td>304177.0</td>
+      <td>1659028.0</td>
+      <td>715680.0</td>
+      <td>2653798.0</td>
+      <td>1481703.0</td>
+      <td>735036.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ALASKA</td>
+      <td>1992</td>
+      <td>NaN</td>
+      <td>1049591.0</td>
+      <td>106780.0</td>
+      <td>720711.0</td>
+      <td>222100.0</td>
+      <td>972488.0</td>
+      <td>498362.0</td>
+      <td>350902.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ARIZONA</td>
+      <td>1992</td>
+      <td>NaN</td>
+      <td>3258079.0</td>
+      <td>297888.0</td>
+      <td>1369815.0</td>
+      <td>1590376.0</td>
+      <td>3401580.0</td>
+      <td>1435908.0</td>
+      <td>1007732.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ARKANSAS</td>
+      <td>1992</td>
+      <td>NaN</td>
+      <td>1711959.0</td>
+      <td>178571.0</td>
+      <td>958785.0</td>
+      <td>574603.0</td>
+      <td>1743022.0</td>
+      <td>964323.0</td>
+      <td>483488.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>CALIFORNIA</td>
+      <td>1992</td>
+      <td>NaN</td>
+      <td>26260025.0</td>
+      <td>2072470.0</td>
+      <td>16546514.0</td>
+      <td>7641041.0</td>
+      <td>27138832.0</td>
+      <td>14358922.0</td>
+      <td>8520926.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1710</th>
+      <td>VIRGINIA</td>
+      <td>2019</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>247.0</td>
+      <td>278.0</td>
+      <td>286.0</td>
+      <td>315.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>269.0</td>
+      <td>293.0</td>
+    </tr>
+    <tr>
+      <th>1711</th>
+      <td>WASHINGTON</td>
+      <td>2019</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>248.0</td>
+      <td>267.0</td>
+      <td>285.0</td>
+      <td>315.0</td>
+      <td>237.0</td>
+      <td>259.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>263.0</td>
+      <td>292.0</td>
+    </tr>
+    <tr>
+      <th>1712</th>
+      <td>WEST_VIRGINIA</td>
+      <td>2019</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>249.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1713</th>
+      <td>WISCONSIN</td>
+      <td>2019</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>251.0</td>
+      <td>273.0</td>
+      <td>277.0</td>
+      <td>294.0</td>
+      <td>253.0</td>
+      <td>267.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>268.0</td>
+      <td>276.0</td>
+    </tr>
+    <tr>
+      <th>1714</th>
+      <td>WYOMING</td>
+      <td>2019</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>254.0</td>
+      <td>274.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>243.0</td>
+      <td>258.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>274.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>1715 rows × 265 columns</p>
+</div>
+</div>
+</div>
+<div class="cell markdown">
+<p>We are going to use data after 2009 because anything before this does not take DEMOGRAPHICS into account... and thats kinda what we want to do</p>
+</div>
+<div class="cell code" data-execution_count="6">
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#setup for 2009. Getting the previous and current length setup</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>prev <span class="op">=</span> <span class="bu">len</span>(school.index)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>school <span class="op">=</span> school[school[<span class="st">&#39;YEAR&#39;</span>] <span class="op">&gt;=</span> <span class="dv">2009</span>]</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>curr <span class="op">=</span> <span class="bu">len</span>(school.index)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span></code></pre></div>
+</div>
+<section id="part-3-exploratory-data-analysis" class="cell markdown">
+<h1>Part 3: Exploratory Data Analysis</h1>
+</section>
+<div class="cell markdown">
+<p>For our analysis we will examine any possible trends between states and average scores in math/reading for 4th graders over the years.</p>
+<p>To do this, we can create a "GROWTH" variable that will calculate the difference between the average 4th grade math and reading scores from 2009 and the average 4th grade scores from 2015. If there is no inequality in education among states, we would expect that all states would have experienced the same change in average scores from 2009 to 2015. To visualize these comparisons, we will create heat plots to compare the data for each state.</p>
+<p>Since the geopandas library we will be using to create the map requires geometrical coordinates, we need to get the grid coordinates of the United States map with state outlines. We obtained our map shapefile and other necessary mapping files from the US Census (the shapefile used).</p>
+</div>
+<div class="cell code" data-execution_count="13">
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#reading shapefile to get geometric coordinates (MULTIPOLYGON objects)</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>states <span class="op">=</span> geopandas.read_file(<span class="st">&quot;cb_2018_us_state_500k.shp&quot;</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>states.head()</span></code></pre></div>
+<div class="output execute_result" data-execution_count="13">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>STATEFP</th>
+      <th>STATENS</th>
+      <th>AFFGEOID</th>
+      <th>GEOID</th>
+      <th>STUSPS</th>
+      <th>NAME</th>
+      <th>LSAD</th>
+      <th>ALAND</th>
+      <th>AWATER</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>28</td>
+      <td>01779790</td>
+      <td>0400000US28</td>
+      <td>28</td>
+      <td>MS</td>
+      <td>Mississippi</td>
+      <td>00</td>
+      <td>121533519481</td>
+      <td>3926919758</td>
+      <td>MULTIPOLYGON (((-88.50297 30.21523, -88.49176 ...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>37</td>
+      <td>01027616</td>
+      <td>0400000US37</td>
+      <td>37</td>
+      <td>NC</td>
+      <td>North Carolina</td>
+      <td>00</td>
+      <td>125923656064</td>
+      <td>13466071395</td>
+      <td>MULTIPOLYGON (((-75.72681 35.93584, -75.71827 ...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>40</td>
+      <td>01102857</td>
+      <td>0400000US40</td>
+      <td>40</td>
+      <td>OK</td>
+      <td>Oklahoma</td>
+      <td>00</td>
+      <td>177662925723</td>
+      <td>3374587997</td>
+      <td>POLYGON ((-103.00257 36.52659, -103.00219 36.6...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>51</td>
+      <td>01779803</td>
+      <td>0400000US51</td>
+      <td>51</td>
+      <td>VA</td>
+      <td>Virginia</td>
+      <td>00</td>
+      <td>102257717110</td>
+      <td>8528531774</td>
+      <td>MULTIPOLYGON (((-75.74241 37.80835, -75.74151 ...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>54</td>
+      <td>01779805</td>
+      <td>0400000US54</td>
+      <td>54</td>
+      <td>WV</td>
+      <td>West Virginia</td>
+      <td>00</td>
+      <td>62266474513</td>
+      <td>489028543</td>
+      <td>POLYGON ((-82.64320 38.16909, -82.64300 38.169...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell code" data-execution_count="19">
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#matching data between states and school dataframes </span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;grid data for states: </span><span class="sc">{}</span><span class="st">&quot;</span>.<span class="bu">format</span>(<span class="bu">list</span>(states[<span class="st">&quot;NAME&quot;</span>])))</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;school data states: </span><span class="sc">{}</span><span class="st">&quot;</span>.<span class="bu">format</span>(<span class="bu">list</span>(school[<span class="st">&quot;STATE&quot;</span>].unique())))</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>grid data for states: [&#39;Mississippi&#39;, &#39;North Carolina&#39;, &#39;Oklahoma&#39;, &#39;Virginia&#39;, &#39;West Virginia&#39;, &#39;Louisiana&#39;, &#39;Michigan&#39;, &#39;Massachusetts&#39;, &#39;Idaho&#39;, &#39;Florida&#39;, &#39;Nebraska&#39;, &#39;Washington&#39;, &#39;New Mexico&#39;, &#39;Puerto Rico&#39;, &#39;South Dakota&#39;, &#39;Texas&#39;, &#39;California&#39;, &#39;Alabama&#39;, &#39;Georgia&#39;, &#39;Pennsylvania&#39;, &#39;Missouri&#39;, &#39;Colorado&#39;, &#39;Utah&#39;, &#39;Tennessee&#39;, &#39;Wyoming&#39;, &#39;New York&#39;, &#39;Kansas&#39;, &#39;Alaska&#39;, &#39;Nevada&#39;, &#39;Illinois&#39;, &#39;Vermont&#39;, &#39;Montana&#39;, &#39;Iowa&#39;, &#39;South Carolina&#39;, &#39;New Hampshire&#39;, &#39;Arizona&#39;, &#39;District of Columbia&#39;, &#39;American Samoa&#39;, &#39;United States Virgin Islands&#39;, &#39;New Jersey&#39;, &#39;Maryland&#39;, &#39;Maine&#39;, &#39;Hawaii&#39;, &#39;Delaware&#39;, &#39;Guam&#39;, &#39;Commonwealth of the Northern Mariana Islands&#39;, &#39;Rhode Island&#39;, &#39;Kentucky&#39;, &#39;Ohio&#39;, &#39;Wisconsin&#39;, &#39;Oregon&#39;, &#39;North Dakota&#39;, &#39;Arkansas&#39;, &#39;Indiana&#39;, &#39;Minnesota&#39;, &#39;Connecticut&#39;]
+school data states: [&#39;ALABAMA&#39;, &#39;ALASKA&#39;, &#39;ARIZONA&#39;, &#39;ARKANSAS&#39;, &#39;CALIFORNIA&#39;, &#39;COLORADO&#39;, &#39;CONNECTICUT&#39;, &#39;DELAWARE&#39;, &#39;DISTRICT_OF_COLUMBIA&#39;, &#39;FLORIDA&#39;, &#39;GEORGIA&#39;, &#39;HAWAII&#39;, &#39;IDAHO&#39;, &#39;ILLINOIS&#39;, &#39;INDIANA&#39;, &#39;IOWA&#39;, &#39;KANSAS&#39;, &#39;KENTUCKY&#39;, &#39;LOUISIANA&#39;, &#39;MAINE&#39;, &#39;MARYLAND&#39;, &#39;MASSACHUSETTS&#39;, &#39;MICHIGAN&#39;, &#39;MINNESOTA&#39;, &#39;MISSISSIPPI&#39;, &#39;MISSOURI&#39;, &#39;MONTANA&#39;, &#39;NEBRASKA&#39;, &#39;NEVADA&#39;, &#39;NEW_HAMPSHIRE&#39;, &#39;NEW_JERSEY&#39;, &#39;NEW_MEXICO&#39;, &#39;NEW_YORK&#39;, &#39;NORTH_CAROLINA&#39;, &#39;NORTH_DAKOTA&#39;, &#39;OHIO&#39;, &#39;OKLAHOMA&#39;, &#39;OREGON&#39;, &#39;PENNSYLVANIA&#39;, &#39;RHODE_ISLAND&#39;, &#39;SOUTH_CAROLINA&#39;, &#39;SOUTH_DAKOTA&#39;, &#39;TENNESSEE&#39;, &#39;TEXAS&#39;, &#39;UTAH&#39;, &#39;VERMONT&#39;, &#39;VIRGINIA&#39;, &#39;WASHINGTON&#39;, &#39;WEST_VIRGINIA&#39;, &#39;WISCONSIN&#39;, &#39;WYOMING&#39;, &#39;DODEA&#39;, &#39;NATIONAL&#39;]
+</code></pre>
+</div>
+</div>
+<div class="cell code" data-execution_count="38">
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Dropping inconsistent states then merging</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>coordinates <span class="op">=</span> states[states.NAME <span class="op">!=</span> <span class="st">&quot;Commonwealth of the Northern Mariana Islands&quot;</span>]</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>coordinates <span class="op">=</span> coordinates[coordinates.NAME <span class="op">!=</span> <span class="st">&quot;Guam&quot;</span>]</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>coordinates <span class="op">=</span> coordinates[coordinates.NAME <span class="op">!=</span> <span class="st">&quot;American Samoa&quot;</span>]</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>coordinates <span class="op">=</span> coordinates[coordinates.NAME <span class="op">!=</span> <span class="st">&quot;Puerto Rico&quot;</span>]</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>coordinates <span class="op">=</span> coordinates[coordinates.NAME <span class="op">!=</span> <span class="st">&quot;United States Virgin Islands&quot;</span>]</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>coordinates <span class="op">=</span> coordinates.sort_values(by<span class="op">=</span>[<span class="st">&#39;NAME&#39;</span>])</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>coordinates.head()</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i,row <span class="kw">in</span> states.iterrows():</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    coordinates.at[i, <span class="st">&#39;NAME&#39;</span>] <span class="op">=</span> row[<span class="st">&#39;NAME&#39;</span>].replace(<span class="st">&#39; &#39;</span>, <span class="st">&#39;_&#39;</span>)</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    coordinates.at[i, <span class="st">&#39;NAME&#39;</span>] <span class="op">=</span> coordinates.at[i, <span class="st">&#39;NAME&#39;</span>].upper()</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>coordinates <span class="op">=</span> coordinates.rename(columns<span class="op">=</span> {<span class="st">&#39;NAME&#39;</span>:<span class="st">&#39;STATE&#39;</span>})</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>coordinates.head()</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a></span></code></pre></div>
+<div class="output execute_result" data-execution_count="38">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>STATEFP</th>
+      <th>STATENS</th>
+      <th>AFFGEOID</th>
+      <th>GEOID</th>
+      <th>STUSPS</th>
+      <th>STATE</th>
+      <th>LSAD</th>
+      <th>ALAND</th>
+      <th>AWATER</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>17</th>
+      <td>01</td>
+      <td>01779775</td>
+      <td>0400000US01</td>
+      <td>01</td>
+      <td>AL</td>
+      <td>ALABAMA</td>
+      <td>00</td>
+      <td>1.311740e+11</td>
+      <td>4.593327e+09</td>
+      <td>MULTIPOLYGON (((-88.05338 30.50699, -88.05109 ...</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>02</td>
+      <td>01785533</td>
+      <td>0400000US02</td>
+      <td>02</td>
+      <td>AK</td>
+      <td>ALASKA</td>
+      <td>00</td>
+      <td>1.478840e+12</td>
+      <td>2.454816e+11</td>
+      <td>MULTIPOLYGON (((179.48246 51.98283, 179.48656 ...</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>04</td>
+      <td>01779777</td>
+      <td>0400000US04</td>
+      <td>04</td>
+      <td>AZ</td>
+      <td>ARIZONA</td>
+      <td>00</td>
+      <td>2.941986e+11</td>
+      <td>1.027338e+09</td>
+      <td>POLYGON ((-114.81629 32.50804, -114.81432 32.5...</td>
+    </tr>
+    <tr>
+      <th>52</th>
+      <td>05</td>
+      <td>00068085</td>
+      <td>0400000US05</td>
+      <td>05</td>
+      <td>AR</td>
+      <td>ARKANSAS</td>
+      <td>00</td>
+      <td>1.347689e+11</td>
+      <td>2.962860e+09</td>
+      <td>POLYGON ((-94.61783 36.49941, -94.61765 36.499...</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>06</td>
+      <td>01779778</td>
+      <td>0400000US06</td>
+      <td>06</td>
+      <td>CA</td>
+      <td>CALIFORNIA</td>
+      <td>00</td>
+      <td>4.035039e+11</td>
+      <td>2.046387e+10</td>
+      <td>MULTIPOLYGON (((-118.60442 33.47855, -118.5987...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell markdown">
+<p>Now have to drop irrelevant data in education data set from both 2009 and 2015</p>
+</div>
+<div class="cell code" data-execution_count="47">
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>data_09 <span class="op">=</span> school[school[<span class="st">&#39;YEAR&#39;</span>] <span class="op">==</span> <span class="dv">2009</span>]</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>data_09 <span class="op">=</span> data_09[data_09.STATE <span class="op">!=</span> <span class="st">&quot;DODEA&quot;</span>]</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>data_09 <span class="op">=</span> data_09[data_09.STATE <span class="op">!=</span> <span class="st">&quot;NATIONAL&quot;</span>]</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>data_09.drop([<span class="st">&#39;TOTAL_REVENUE&#39;</span>, <span class="st">&#39;FEDERAL_REVENUE&#39;</span>, <span class="st">&#39;STATE_REVENUE&#39;</span>, <span class="st">&#39;LOCAL_REVENUE&#39;</span>, <span class="st">&#39;ENROLL&#39;</span>, <span class="st">&#39;TOTAL_EXPENDITURE&#39;</span>, <span class="st">&#39;CAPITAL_OUTLAY_EXPENDITURE&#39;</span>,<span class="st">&#39;INSTRUCTION_EXPENDITURE&#39;</span>,<span class="st">&#39;SUPPORT_SERVICES_EXPENDITURE&#39;</span>, <span class="st">&#39;OTHER_EXPENDITURE&#39;</span>],inplace<span class="op">=</span><span class="va">True</span>, axis<span class="op">=</span><span class="dv">1</span> )</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>data_09 <span class="op">=</span> data_09.sort_values(by <span class="op">=</span> [<span class="st">&#39;STATE&#39;</span>])</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>data_09 <span class="op">=</span> data_09.reset_index()</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>data_09.drop(<span class="st">&#39;index&#39;</span>,inplace<span class="op">=</span><span class="va">True</span>, axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co">#data_09.head()</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>data_15 <span class="op">=</span> school[school[<span class="st">&#39;YEAR&#39;</span>] <span class="op">==</span> <span class="dv">2015</span>]</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>data_15 <span class="op">=</span> data_15[data_15.STATE <span class="op">!=</span> <span class="st">&quot;DODEA&quot;</span>]</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>data_15 <span class="op">=</span> data_15[data_15.STATE <span class="op">!=</span> <span class="st">&quot;NATIONAL&quot;</span>]</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>data_15.drop([<span class="st">&#39;TOTAL_REVENUE&#39;</span>, <span class="st">&#39;FEDERAL_REVENUE&#39;</span>, <span class="st">&#39;STATE_REVENUE&#39;</span>, <span class="st">&#39;LOCAL_REVENUE&#39;</span>, <span class="st">&#39;ENROLL&#39;</span>, <span class="st">&#39;TOTAL_EXPENDITURE&#39;</span>, <span class="st">&#39;CAPITAL_OUTLAY_EXPENDITURE&#39;</span>,<span class="st">&#39;INSTRUCTION_EXPENDITURE&#39;</span>,<span class="st">&#39;SUPPORT_SERVICES_EXPENDITURE&#39;</span>, <span class="st">&#39;OTHER_EXPENDITURE&#39;</span>],inplace<span class="op">=</span><span class="va">True</span>, axis<span class="op">=</span><span class="dv">1</span> )</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>data_15 <span class="op">=</span> data_15.sort_values(by <span class="op">=</span> <span class="st">&#39;STATE&#39;</span>)</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>data_15 <span class="op">=</span> data_15.reset_index()</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>data_15.head()</span></code></pre></div>
+<div class="output execute_result" data-execution_count="47">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>index</th>
+      <th>STATE</th>
+      <th>YEAR</th>
+      <th>A_A_A</th>
+      <th>G01_A_A</th>
+      <th>G02_A_A</th>
+      <th>G03_A_A</th>
+      <th>G04_A_A</th>
+      <th>G05_A_A</th>
+      <th>G06_A_A</th>
+      <th>...</th>
+      <th>G08_HI_A_READING</th>
+      <th>G08_HI_A_MATHEMATICS</th>
+      <th>G08_AS_A_READING</th>
+      <th>G08_AS_A_MATHEMATICS</th>
+      <th>G08_AM_A_READING</th>
+      <th>G08_AM_A_MATHEMATICS</th>
+      <th>G08_HP_A_READING</th>
+      <th>G08_HP_A_MATHEMATICS</th>
+      <th>G08_TR_A_READING</th>
+      <th>G08_TR_A_MATHEMATICS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1173</td>
+      <td>ALABAMA</td>
+      <td>2015</td>
+      <td>743789.0</td>
+      <td>59023.0</td>
+      <td>58766.0</td>
+      <td>57963.0</td>
+      <td>55808.0</td>
+      <td>55340.0</td>
+      <td>54900.0</td>
+      <td>...</td>
+      <td>252.0</td>
+      <td>260.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1174</td>
+      <td>ALASKA</td>
+      <td>2015</td>
+      <td>132477.0</td>
+      <td>10587.0</td>
+      <td>10512.0</td>
+      <td>10441.0</td>
+      <td>10118.0</td>
+      <td>9793.0</td>
+      <td>9648.0</td>
+      <td>...</td>
+      <td>263.0</td>
+      <td>279.0</td>
+      <td>260.0</td>
+      <td>282.0</td>
+      <td>231.0</td>
+      <td>257.0</td>
+      <td>242.0</td>
+      <td>NaN</td>
+      <td>270.0</td>
+      <td>285.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1175</td>
+      <td>ARIZONA</td>
+      <td>2015</td>
+      <td>1109040.0</td>
+      <td>84804.0</td>
+      <td>87325.0</td>
+      <td>88194.0</td>
+      <td>86594.0</td>
+      <td>85719.0</td>
+      <td>85202.0</td>
+      <td>...</td>
+      <td>254.0</td>
+      <td>273.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>244.0</td>
+      <td>260.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1176</td>
+      <td>ARKANSAS</td>
+      <td>2015</td>
+      <td>492132.0</td>
+      <td>38160.0</td>
+      <td>38590.0</td>
+      <td>38410.0</td>
+      <td>35893.0</td>
+      <td>35850.0</td>
+      <td>36020.0</td>
+      <td>...</td>
+      <td>255.0</td>
+      <td>269.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1177</td>
+      <td>CALIFORNIA</td>
+      <td>2015</td>
+      <td>6226737.0</td>
+      <td>444573.0</td>
+      <td>463881.0</td>
+      <td>470157.0</td>
+      <td>485885.0</td>
+      <td>476427.0</td>
+      <td>471467.0</td>
+      <td>...</td>
+      <td>249.0</td>
+      <td>263.0</td>
+      <td>279.0</td>
+      <td>304.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>263.0</td>
+      <td>289.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 256 columns</p>
+</div>
+</div>
+</div>
+<div class="cell markdown">
+<p>Now to create the dataframe for the differences between the 2009 and 2015 for each state. This will be done by iterating through both data_09 and data_15 and substract the math and reading scores. These values will be used in our heat map</p>
+</div>
+<div class="cell code" data-execution_count="57">
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>differences <span class="op">=</span> pd.DataFrame()</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>differences[<span class="st">&#39;STATE&#39;</span>] <span class="op">=</span> data_15[<span class="st">&#39;STATE&#39;</span>]</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, row <span class="kw">in</span> data_09.iterrows():</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    read_val2009 <span class="op">=</span> <span class="bu">float</span>(data_09.at[i, <span class="st">&quot;G04_A_A_READING&quot;</span>])</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    read_val2015 <span class="op">=</span> <span class="bu">float</span>(data_15.at[i, <span class="st">&quot;G04_A_A_READING&quot;</span>])</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    reading_difference <span class="op">=</span> read_val2015 <span class="op">-</span> read_val2009</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    differences.at[i, <span class="st">&#39;READING&#39;</span>] <span class="op">=</span> reading_difference</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    math_val2009 <span class="op">=</span> <span class="bu">float</span>(data_09.at[i, <span class="st">&quot;G04_A_A_MATHEMATICS&quot;</span>])</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    math_val2015 <span class="op">=</span> <span class="bu">float</span>(data_15.at[i, <span class="st">&quot;G04_A_A_MATHEMATICS&quot;</span>])</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    math_difference <span class="op">=</span> math_val2015 <span class="op">-</span> math_val2009</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    differences.at[i, <span class="st">&#39;MATH&#39;</span>] <span class="op">=</span> math_difference</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>differences.head()</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>map_data <span class="op">=</span> coordinates.merge(differences, on<span class="op">=</span><span class="st">&quot;STATE&quot;</span>)</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>map_data.head()</span></code></pre></div>
+<div class="output execute_result" data-execution_count="57">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>STATEFP</th>
+      <th>STATENS</th>
+      <th>AFFGEOID</th>
+      <th>GEOID</th>
+      <th>STUSPS</th>
+      <th>STATE</th>
+      <th>LSAD</th>
+      <th>ALAND</th>
+      <th>AWATER</th>
+      <th>geometry</th>
+      <th>READING</th>
+      <th>MATH</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>01</td>
+      <td>01779775</td>
+      <td>0400000US01</td>
+      <td>01</td>
+      <td>AL</td>
+      <td>ALABAMA</td>
+      <td>00</td>
+      <td>1.311740e+11</td>
+      <td>4.593327e+09</td>
+      <td>MULTIPOLYGON (((-88.05338 30.50699, -88.05109 ...</td>
+      <td>1.0</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>02</td>
+      <td>01785533</td>
+      <td>0400000US02</td>
+      <td>02</td>
+      <td>AK</td>
+      <td>ALASKA</td>
+      <td>00</td>
+      <td>1.478840e+12</td>
+      <td>2.454816e+11</td>
+      <td>MULTIPOLYGON (((179.48246 51.98283, 179.48656 ...</td>
+      <td>2.0</td>
+      <td>-1.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>04</td>
+      <td>01779777</td>
+      <td>0400000US04</td>
+      <td>04</td>
+      <td>AZ</td>
+      <td>ARIZONA</td>
+      <td>00</td>
+      <td>2.941986e+11</td>
+      <td>1.027338e+09</td>
+      <td>POLYGON ((-114.81629 32.50804, -114.81432 32.5...</td>
+      <td>5.0</td>
+      <td>8.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>05</td>
+      <td>00068085</td>
+      <td>0400000US05</td>
+      <td>05</td>
+      <td>AR</td>
+      <td>ARKANSAS</td>
+      <td>00</td>
+      <td>1.347689e+11</td>
+      <td>2.962860e+09</td>
+      <td>POLYGON ((-94.61783 36.49941, -94.61765 36.499...</td>
+      <td>2.0</td>
+      <td>-3.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>06</td>
+      <td>01779778</td>
+      <td>0400000US06</td>
+      <td>06</td>
+      <td>CA</td>
+      <td>CALIFORNIA</td>
+      <td>00</td>
+      <td>4.035039e+11</td>
+      <td>2.046387e+10</td>
+      <td>MULTIPOLYGON (((-118.60442 33.47855, -118.5987...</td>
+      <td>3.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell markdown">
+<p>Now we can plot the data accordingly as two heat maps: one for math scores across the states and the other for reading.</p>
+</div>
+<div class="cell code" data-execution_count="81">
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">14</span>, <span class="dv">14</span>))</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">90</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>map_data.plot(column <span class="op">=</span> <span class="st">&quot;READING&quot;</span>, cmap <span class="op">=</span> <span class="st">&quot;Reds&quot;</span>, linewidth <span class="op">=</span> <span class="fl">0.4</span>, ax <span class="op">=</span> ax, edgecolor <span class="op">=</span> <span class="st">&quot;.4&quot;</span>)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">&#39;Reading Scores Growth for US 4th Graders from 2009 to 2016&#39;</span>)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>color_grade <span class="op">=</span> plt.cm.ScalarMappable(cmap<span class="op">=</span><span class="st">&quot;Reds&quot;</span>, norm<span class="op">=</span>plt.Normalize(vmin<span class="op">=</span> <span class="op">-</span><span class="dv">6</span>, vmax<span class="op">=</span><span class="dv">6</span>))</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>color_axis <span class="op">=</span> fig.add_axes([ax.get_position().x1 <span class="op">+</span> <span class="fl">0.01</span>,ax.get_position().y0,<span class="fl">0.05</span>,ax.get_position().height])</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>cbar <span class="op">=</span> fig.colorbar(color_grade, cax <span class="op">=</span> color_axis)</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="op">-</span><span class="dv">130</span>, <span class="op">-</span><span class="dv">60</span>)</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="dv">25</span>, <span class="dv">50</span>)</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>ax.axis(<span class="st">&quot;off&quot;</span>)</span></code></pre></div>
+<div class="output execute_result" data-execution_count="81">
+<pre><code>(-130.0, -60.0, 25.0, 50.0)</code></pre>
+</div>
+<div class="output display_data">
+<p><img src="vertopal_501ecb19c16c4d8494cb850f68fe2375/0d1f6c110d8241530ba3e0cb6d915add41224914.png" /></p>
+</div>
+</div>
+<section id="observations" class="cell markdown">
+<h2>Observations:</h2>
+<p>The heatmap above shows the change in reading literacy among 4th graders in the United States from 2009 to 2015. The heatmap shows that not all states have experienced the same growth in reading literacy, indicating that there may be educational inequality among states. Some states, such as Louisiana and North Carolina, have seen positive growth in reading literacy, while others, such as Kansas and Maryland, have seen a decline. This suggests that reading literacy growth may be dependent on the state and that educational inequality may exist.</p>
+</section>
+<div class="cell code" data-execution_count="73">
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">14</span>, <span class="dv">14</span>))</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">90</span>)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>map_data.plot(column <span class="op">=</span> <span class="st">&quot;MATH&quot;</span>, cmap <span class="op">=</span> <span class="st">&quot;Blues&quot;</span>, linewidth <span class="op">=</span> <span class="fl">0.4</span>, ax <span class="op">=</span> ax, edgecolor <span class="op">=</span> <span class="st">&quot;.4&quot;</span>)</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">&#39;MATH Scores Growth for US 4th Graders from 2009 to 2016&#39;</span>)</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>color_grade <span class="op">=</span> plt.cm.ScalarMappable(cmap<span class="op">=</span><span class="st">&quot;Blues&quot;</span>, norm<span class="op">=</span>plt.Normalize(vmin<span class="op">=</span> <span class="op">-</span><span class="dv">6</span>, vmax<span class="op">=</span><span class="dv">6</span>))</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>color_axis <span class="op">=</span> fig.add_axes([ax.get_position().x1 <span class="op">+</span> <span class="fl">0.01</span>,ax.get_position().y0,<span class="fl">0.05</span>,ax.get_position().height])</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>cbar <span class="op">=</span> fig.colorbar(color_grade, cax <span class="op">=</span> color_axis)</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="op">-</span><span class="dv">130</span>, <span class="op">-</span><span class="dv">60</span>)</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="dv">25</span>, <span class="dv">50</span>)</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>ax.axis(<span class="st">&quot;off&quot;</span>)</span></code></pre></div>
+<div class="output execute_result" data-execution_count="73">
+<pre><code>(-130.0, -60.0, 25.0, 50.0)</code></pre>
+</div>
+<div class="output display_data">
+<p><img src="vertopal_501ecb19c16c4d8494cb850f68fe2375/cd3012a1bd027308cff5f8b9c8e76387653ebb5f.png" /></p>
+</div>
+</div>
+<section id="observations" class="cell markdown">
+<h2>Observations:</h2>
+<p>Looking at the plot, it can immediately be determined that students in New York, Vermont, Maryland, New Jersey, and Kansas saw a decrease in their average mathematics scores from 2009 to 2015. If were relating the data from both graphs, states such as New York, Vermont, and New Jersey had a smaller decrease in reading literacy compared to Math, and States such as Tennessee, Texas, and Alabama had little to no growth in mathematics literacy but saw a decrease in reading literacy. This may indicate that reading and math education standards vary from state to state.</p>
+</section>
+<section id="part-4-hypothesis-testing" class="cell markdown">
+<h1>Part 4: Hypothesis Testing</h1>
+</section>
+<div class="cell markdown">
+<p>G04_A_A_READING stands for reading averages from all races from grade 3 (2009-2019) <br> G04_A_A_MATHEMATICS stands for math averages from all races from grade 3 (2009-2019)</p>
+</div>
+<div class="cell code" data-execution_count="124">
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">#finding the average read writing scores for each </span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>avg_score <span class="op">=</span> school[[<span class="st">&#39;STATE&#39;</span>, <span class="st">&#39;YEAR&#39;</span>, <span class="st">&#39;G04_A_A_READING&#39;</span>, <span class="st">&#39;G04_A_A_MATHEMATICS&#39;</span>]]</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>avg_score</span></code></pre></div>
+<div class="output execute_result" data-execution_count="124">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>STATE</th>
+      <th>YEAR</th>
+      <th>G04_A_A_READING</th>
+      <th>G04_A_A_MATHEMATICS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>867</th>
+      <td>ALABAMA</td>
+      <td>2009</td>
+      <td>216.0</td>
+      <td>228.0</td>
+    </tr>
+    <tr>
+      <th>868</th>
+      <td>ALASKA</td>
+      <td>2009</td>
+      <td>211.0</td>
+      <td>237.0</td>
+    </tr>
+    <tr>
+      <th>869</th>
+      <td>ARIZONA</td>
+      <td>2009</td>
+      <td>210.0</td>
+      <td>230.0</td>
+    </tr>
+    <tr>
+      <th>870</th>
+      <td>ARKANSAS</td>
+      <td>2009</td>
+      <td>216.0</td>
+      <td>238.0</td>
+    </tr>
+    <tr>
+      <th>871</th>
+      <td>CALIFORNIA</td>
+      <td>2009</td>
+      <td>210.0</td>
+      <td>232.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1710</th>
+      <td>VIRGINIA</td>
+      <td>2019</td>
+      <td>224.0</td>
+      <td>247.0</td>
+    </tr>
+    <tr>
+      <th>1711</th>
+      <td>WASHINGTON</td>
+      <td>2019</td>
+      <td>220.0</td>
+      <td>240.0</td>
+    </tr>
+    <tr>
+      <th>1712</th>
+      <td>WEST_VIRGINIA</td>
+      <td>2019</td>
+      <td>213.0</td>
+      <td>231.0</td>
+    </tr>
+    <tr>
+      <th>1713</th>
+      <td>WISCONSIN</td>
+      <td>2019</td>
+      <td>220.0</td>
+      <td>242.0</td>
+    </tr>
+    <tr>
+      <th>1714</th>
+      <td>WYOMING</td>
+      <td>2019</td>
+      <td>227.0</td>
+      <td>246.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>522 rows × 4 columns</p>
+</div>
+</div>
+</div>
+<div class="cell markdown">
+<p>Our formula for getting the growth of reading and math score, we subtracted the 2009 average score from each data point (2010-2019) <br> This is our score change, which we will use for both math (MATH_CHANGE) and reading (READING_CHANGE)</p>
+</div>
+<section id="math_change" class="cell markdown">
+<h3>MATH_CHANGE</h3>
+</section>
+<div class="cell code" data-execution_count="125">
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">#MATH CHANGE</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co">#set MATH_CHANGE = NaN</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>avg_score[<span class="st">&#39;MATH_CHANGE&#39;</span>] <span class="op">=</span> np.NaN</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="co">#function to find and return average math for 2009</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> find_math_scores_2009(row):</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>    state_row <span class="op">=</span> row[<span class="st">&#39;STATE&#39;</span>]</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>    new <span class="op">=</span> avg_score.loc[avg_score[<span class="st">&#39;STATE&#39;</span>] <span class="op">==</span> state_row]</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>    new <span class="op">=</span> new.loc[new[<span class="st">&#39;YEAR&#39;</span>] <span class="op">==</span> <span class="dv">2009</span>]</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> new[<span class="st">&#39;G04_A_A_MATHEMATICS&#39;</span>]</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Subtract the 2009 average score from each data point (2010-2019)</span></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, row <span class="kw">in</span> avg_score.iterrows():</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>    avg_score.at[i, <span class="st">&#39;MATH_CHANGE&#39;</span>] <span class="op">=</span> row[<span class="st">&#39;G04_A_A_MATHEMATICS&#39;</span>] <span class="op">-</span> find_math_scores_2009(row)</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>avg_score</span></code></pre></div>
+<div class="output stream stderr">
+<pre><code>/tmp/ipykernel_7871/3214621666.py:4: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  avg_score[&#39;MATH_CHANGE&#39;] = np.NaN
+</code></pre>
+</div>
+<div class="output execute_result" data-execution_count="125">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>STATE</th>
+      <th>YEAR</th>
+      <th>G04_A_A_READING</th>
+      <th>G04_A_A_MATHEMATICS</th>
+      <th>MATH_CHANGE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>867</th>
+      <td>ALABAMA</td>
+      <td>2009</td>
+      <td>216.0</td>
+      <td>228.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>868</th>
+      <td>ALASKA</td>
+      <td>2009</td>
+      <td>211.0</td>
+      <td>237.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>869</th>
+      <td>ARIZONA</td>
+      <td>2009</td>
+      <td>210.0</td>
+      <td>230.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>870</th>
+      <td>ARKANSAS</td>
+      <td>2009</td>
+      <td>216.0</td>
+      <td>238.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>871</th>
+      <td>CALIFORNIA</td>
+      <td>2009</td>
+      <td>210.0</td>
+      <td>232.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1710</th>
+      <td>VIRGINIA</td>
+      <td>2019</td>
+      <td>224.0</td>
+      <td>247.0</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>1711</th>
+      <td>WASHINGTON</td>
+      <td>2019</td>
+      <td>220.0</td>
+      <td>240.0</td>
+      <td>-2.0</td>
+    </tr>
+    <tr>
+      <th>1712</th>
+      <td>WEST_VIRGINIA</td>
+      <td>2019</td>
+      <td>213.0</td>
+      <td>231.0</td>
+      <td>-2.0</td>
+    </tr>
+    <tr>
+      <th>1713</th>
+      <td>WISCONSIN</td>
+      <td>2019</td>
+      <td>220.0</td>
+      <td>242.0</td>
+      <td>-2.0</td>
+    </tr>
+    <tr>
+      <th>1714</th>
+      <td>WYOMING</td>
+      <td>2019</td>
+      <td>227.0</td>
+      <td>246.0</td>
+      <td>4.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>522 rows × 5 columns</p>
+</div>
+</div>
+</div>
+<section id="reading_change" class="cell markdown">
+<h3>READING_CHANGE</h3>
+</section>
+<div class="cell code" data-execution_count="126">
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">#MATH CHANGE</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="co">#set READING_CHANGE = NaN</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>avg_score[<span class="st">&#39;READING_CHANGE&#39;</span>] <span class="op">=</span> np.NaN</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="co">#function to find and return average reading for 2009</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> find_reading_scores_2009(row):</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>    state_row <span class="op">=</span> row[<span class="st">&#39;STATE&#39;</span>]</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>    new <span class="op">=</span> avg_score.loc[avg_score[<span class="st">&#39;STATE&#39;</span>] <span class="op">==</span> state_row]</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>    new <span class="op">=</span> new.loc[new[<span class="st">&#39;YEAR&#39;</span>] <span class="op">==</span> <span class="dv">2009</span>]</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> new[<span class="st">&#39;G04_A_A_READING&#39;</span>]</span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Subtract the 2009 average score from each data point (2010-2019)</span></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, row <span class="kw">in</span> avg_score.iterrows():</span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>    avg_score.at[i, <span class="st">&#39;READING_CHANGE&#39;</span>] <span class="op">=</span> row[<span class="st">&#39;G04_A_A_READING&#39;</span>] <span class="op">-</span> find_reading_scores_2009(row)</span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>avg_score.head()</span></code></pre></div>
+<div class="output stream stderr">
+<pre><code>/tmp/ipykernel_7871/2551519838.py:4: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  avg_score[&#39;READING_CHANGE&#39;] = np.NaN
+</code></pre>
+</div>
+<div class="output execute_result" data-execution_count="126">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>STATE</th>
+      <th>YEAR</th>
+      <th>G04_A_A_READING</th>
+      <th>G04_A_A_MATHEMATICS</th>
+      <th>MATH_CHANGE</th>
+      <th>READING_CHANGE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>867</th>
+      <td>ALABAMA</td>
+      <td>2009</td>
+      <td>216.0</td>
+      <td>228.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>868</th>
+      <td>ALASKA</td>
+      <td>2009</td>
+      <td>211.0</td>
+      <td>237.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>869</th>
+      <td>ARIZONA</td>
+      <td>2009</td>
+      <td>210.0</td>
+      <td>230.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>870</th>
+      <td>ARKANSAS</td>
+      <td>2009</td>
+      <td>216.0</td>
+      <td>238.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>871</th>
+      <td>CALIFORNIA</td>
+      <td>2009</td>
+      <td>210.0</td>
+      <td>232.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell markdown">
+<p>We can use the pandas method get_dummies to create a dataframe where each state is represented by a binary value (1 or 0) indicating whether the data value is in that state or not. We can then drop the Alabama column because if all other state columns are 0, we can assume the data value must be in Alabama. This is possible because each state is treated as a unique, independent variable.</p>
+</div>
+<div class="cell code" data-execution_count="127">
+<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get dummies</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>avg_score <span class="op">=</span> pd.get_dummies(avg_score, columns<span class="op">=</span>[<span class="st">&#39;STATE&#39;</span>])</span></code></pre></div>
+</div>
+<div class="cell markdown">
+<p>We can then drop the Alabama column because if all other state columns are 0, we can assume the data value must be in Alabama. This is possible because each state is treated as a unique, independent variable.</p>
+</div>
+<div class="cell code" data-execution_count="128">
+<div class="sourceCode" id="cb21"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># drop alabama and reading and mathematics averages since we no longer need them</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>state_avg <span class="op">=</span> avg_score.drop(columns<span class="op">=</span>[<span class="st">&#39;STATE_ALABAMA&#39;</span>, <span class="st">&#39;G04_A_A_READING&#39;</span>, <span class="st">&#39;G04_A_A_MATHEMATICS&#39;</span>])</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>avg_score.head()</span></code></pre></div>
+<div class="output execute_result" data-execution_count="128">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>YEAR</th>
+      <th>G04_A_A_READING</th>
+      <th>G04_A_A_MATHEMATICS</th>
+      <th>MATH_CHANGE</th>
+      <th>READING_CHANGE</th>
+      <th>STATE_ALABAMA</th>
+      <th>STATE_ALASKA</th>
+      <th>STATE_ARIZONA</th>
+      <th>STATE_ARKANSAS</th>
+      <th>STATE_CALIFORNIA</th>
+      <th>...</th>
+      <th>STATE_SOUTH_DAKOTA</th>
+      <th>STATE_TENNESSEE</th>
+      <th>STATE_TEXAS</th>
+      <th>STATE_UTAH</th>
+      <th>STATE_VERMONT</th>
+      <th>STATE_VIRGINIA</th>
+      <th>STATE_WASHINGTON</th>
+      <th>STATE_WEST_VIRGINIA</th>
+      <th>STATE_WISCONSIN</th>
+      <th>STATE_WYOMING</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>867</th>
+      <td>2009</td>
+      <td>216.0</td>
+      <td>228.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>868</th>
+      <td>2009</td>
+      <td>211.0</td>
+      <td>237.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>869</th>
+      <td>2009</td>
+      <td>210.0</td>
+      <td>230.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>870</th>
+      <td>2009</td>
+      <td>216.0</td>
+      <td>238.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>871</th>
+      <td>2009</td>
+      <td>210.0</td>
+      <td>232.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 58 columns</p>
+</div>
+</div>
+</div>
+<div class="cell markdown">
+<p>In order to evaluate the accuracy of our predictor, we need to split our dataset into a training set and a test set. The training set will be used to train the predictor, and the test set will be used to evaluate its performance. In this case, we want to predict the values for the years 2017, 2018, and 2019, so we will use those rows as our test data and the remaining rows as our train data. We will first start the training data by dropping the NaN rows</p>
+</div>
+<div class="cell code" data-execution_count="129">
+<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># drop the NaN rows</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>trainer <span class="op">=</span> state_avg[state_avg[<span class="st">&#39;YEAR&#39;</span>] <span class="op">&lt;</span> <span class="dv">2017</span>].dropna()</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>predictor <span class="op">=</span> state_avg[state_avg[<span class="st">&#39;YEAR&#39;</span>] <span class="op">&gt;=</span> <span class="dv">2017</span>].dropna()</span></code></pre></div>
+</div>
+<div class="cell markdown">
+
+</div>
+<div class="cell code" data-execution_count="130">
+<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>X_reading <span class="op">=</span> []</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>y_reading <span class="op">=</span> []</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>X_math <span class="op">=</span> []</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>y_math <span class="op">=</span> []</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="co"># iterate through each row and add the year and state to the X variables and the growths to the y variables</span></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, row <span class="kw">in</span> trainer.iterrows():</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>    add <span class="op">=</span> row[<span class="dv">3</span>:].tolist()</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>    add.insert(<span class="dv">0</span>, row[<span class="st">&#39;YEAR&#39;</span>])</span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>    X_reading.append(add)</span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>    y_reading.append(row[<span class="st">&#39;READING_CHANGE&#39;</span>])</span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>    X_math.append(add)</span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>    y_math.append(row[<span class="st">&#39;MATH_CHANGE&#39;</span>])</span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>trainer</span></code></pre></div>
+<div class="output execute_result" data-execution_count="130">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>YEAR</th>
+      <th>MATH_CHANGE</th>
+      <th>READING_CHANGE</th>
+      <th>STATE_ALASKA</th>
+      <th>STATE_ARIZONA</th>
+      <th>STATE_ARKANSAS</th>
+      <th>STATE_CALIFORNIA</th>
+      <th>STATE_COLORADO</th>
+      <th>STATE_CONNECTICUT</th>
+      <th>STATE_DELAWARE</th>
+      <th>...</th>
+      <th>STATE_SOUTH_DAKOTA</th>
+      <th>STATE_TENNESSEE</th>
+      <th>STATE_TEXAS</th>
+      <th>STATE_UTAH</th>
+      <th>STATE_VERMONT</th>
+      <th>STATE_VIRGINIA</th>
+      <th>STATE_WASHINGTON</th>
+      <th>STATE_WEST_VIRGINIA</th>
+      <th>STATE_WISCONSIN</th>
+      <th>STATE_WYOMING</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>867</th>
+      <td>2009</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>868</th>
+      <td>2009</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>869</th>
+      <td>2009</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>870</th>
+      <td>2009</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>871</th>
+      <td>2009</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1655</th>
+      <td>2011</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1656</th>
+      <td>2013</td>
+      <td>5.0</td>
+      <td>4.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1657</th>
+      <td>2013</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1658</th>
+      <td>2015</td>
+      <td>8.0</td>
+      <td>6.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1659</th>
+      <td>2015</td>
+      <td>0.0</td>
+      <td>2.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>212 rows × 55 columns</p>
+</div>
+</div>
+</div>
+<div class="cell markdown">
+<p>To create a linear regression model that can make predictions on our data, we need to first separate our data into independent and dependent variables. The independent variables are the factors that we will use to make predictions, while the dependent variables are the values that we want to predict.</p>
+</div>
+<div class="cell code" data-execution_count="131">
+<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>X_tester_reading <span class="op">=</span> []</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>X_tester_math <span class="op">=</span> []</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>reading_regression <span class="op">=</span> LinearRegression().fit(X_reading, y_reading)</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>math_regression <span class="op">=</span> LinearRegression().fit(X_math, y_math)</span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a><span class="co"># accumulate X values for reading and math</span></span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, row <span class="kw">in</span> predictor.iterrows():</span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>    add <span class="op">=</span> row[<span class="dv">3</span>:].tolist()</span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>    add.insert(<span class="dv">0</span>, row[<span class="st">&#39;YEAR&#39;</span>])</span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>    X_tester_reading.append(add)</span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>    X_tester_math.append(add)</span>
+<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a><span class="co"># predict based of X values</span></span>
+<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a>predictor[<span class="st">&#39;PREDICT_MATH&#39;</span>] <span class="op">=</span> reading_regression.predict(X_tester_reading)</span>
+<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a>predictor[<span class="st">&#39;PREDICT_READING&#39;</span>] <span class="op">=</span> reading_regression.predict(X_tester_reading)</span>
+<span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-20"><a href="#cb24-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-21"><a href="#cb24-21" aria-hidden="true" tabindex="-1"></a>predictor</span></code></pre></div>
+<div class="output execute_result" data-execution_count="131">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>YEAR</th>
+      <th>MATH_CHANGE</th>
+      <th>READING_CHANGE</th>
+      <th>STATE_ALASKA</th>
+      <th>STATE_ARIZONA</th>
+      <th>STATE_ARKANSAS</th>
+      <th>STATE_CALIFORNIA</th>
+      <th>STATE_COLORADO</th>
+      <th>STATE_CONNECTICUT</th>
+      <th>STATE_DELAWARE</th>
+      <th>...</th>
+      <th>STATE_TEXAS</th>
+      <th>STATE_UTAH</th>
+      <th>STATE_VERMONT</th>
+      <th>STATE_VIRGINIA</th>
+      <th>STATE_WASHINGTON</th>
+      <th>STATE_WEST_VIRGINIA</th>
+      <th>STATE_WISCONSIN</th>
+      <th>STATE_WYOMING</th>
+      <th>PREDICT_MATH</th>
+      <th>PREDICT_READING</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1281</th>
+      <td>2017</td>
+      <td>4.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3.712264</td>
+      <td>3.712264</td>
+    </tr>
+    <tr>
+      <th>1288</th>
+      <td>2017</td>
+      <td>-7.0</td>
+      <td>-4.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.962264</td>
+      <td>0.962264</td>
+    </tr>
+    <tr>
+      <th>1295</th>
+      <td>2017</td>
+      <td>4.0</td>
+      <td>5.0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>4.212264</td>
+      <td>4.212264</td>
+    </tr>
+    <tr>
+      <th>1302</th>
+      <td>2017</td>
+      <td>-4.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3.212264</td>
+      <td>3.212264</td>
+    </tr>
+    <tr>
+      <th>1309</th>
+      <td>2017</td>
+      <td>0.0</td>
+      <td>5.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3.462264</td>
+      <td>3.462264</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1710</th>
+      <td>2019</td>
+      <td>4.0</td>
+      <td>-3.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3.147170</td>
+      <td>3.147170</td>
+    </tr>
+    <tr>
+      <th>1711</th>
+      <td>2019</td>
+      <td>-2.0</td>
+      <td>-1.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>4.647170</td>
+      <td>4.647170</td>
+    </tr>
+    <tr>
+      <th>1712</th>
+      <td>2019</td>
+      <td>-2.0</td>
+      <td>-2.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2.397170</td>
+      <td>2.397170</td>
+    </tr>
+    <tr>
+      <th>1713</th>
+      <td>2019</td>
+      <td>-2.0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>3.647170</td>
+      <td>3.647170</td>
+    </tr>
+    <tr>
+      <th>1714</th>
+      <td>2019</td>
+      <td>4.0</td>
+      <td>4.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>4.647170</td>
+      <td>4.647170</td>
+    </tr>
+  </tbody>
+</table>
+<p>106 rows × 57 columns</p>
+</div>
+</div>
+</div>
+<div class="cell markdown">
+<p>To determine whether being in a particular state has an effect on the growth of reading and math test scores, we can use the statsmodel library to calculate the p-value of each coefficient that we pass into the model. The p-value is a measure of statistical significance that indicates the probability that the observed relationship between a given independent variable and the dependent variable is due to chance. If the p-value is below a certain threshold (usually 0.05), we can conclude that the relationship is statistically significant and that the independent variable has a significant effect on the dependent variable.</p>
+</div>
+<div class="cell code" data-execution_count="132">
+<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span></code></pre></div>
+</div>
+<div class="cell code" data-execution_count="133">
+<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create statsmodel for math data</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>predict_math <span class="op">=</span> sm.OLS(trainer[<span class="st">&#39;MATH_CHANGE&#39;</span>].tolist(), sm.add_constant(X_math)).fit()</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>predict_math.summary()</span></code></pre></div>
+<div class="output execute_result" data-execution_count="133">
+<table class="simpletable">
+<caption>OLS Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th>            <td>y</td>        <th>  R-squared:         </th> <td>   0.511</td>
+</tr>
+<tr>
+  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared:    </th> <td>   0.346</td>
+</tr>
+<tr>
+  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   3.110</td>
+</tr>
+<tr>
+  <th>Date:</th>             <td>Thu, 08 Dec 2022</td> <th>  Prob (F-statistic):</th> <td>2.35e-08</td>
+</tr>
+<tr>
+  <th>Time:</th>                 <td>02:36:48</td>     <th>  Log-Likelihood:    </th> <td> -420.79</td>
+</tr>
+<tr>
+  <th>No. Observations:</th>      <td>   212</td>      <th>  AIC:               </th> <td>   949.6</td>
+</tr>
+<tr>
+  <th>Df Residuals:</th>          <td>   158</td>      <th>  BIC:               </th> <td>   1131.</td>
+</tr>
+<tr>
+  <th>Df Model:</th>              <td>    53</td>      <th>                     </th>     <td> </td>   
+</tr>
+<tr>
+  <th>Covariance Type:</th>      <td>nonrobust</td>    <th>                     </th>     <td> </td>   
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+    <td></td>       <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>const</th> <td> -407.2425</td> <td>  126.068</td> <td>   -3.230</td> <td> 0.002</td> <td> -656.238</td> <td> -158.247</td>
+</tr>
+<tr>
+  <th>x1</th>    <td>    0.2038</td> <td>    0.063</td> <td>    3.252</td> <td> 0.001</td> <td>    0.080</td> <td>    0.328</td>
+</tr>
+<tr>
+  <th>x2</th>    <td>   -3.5000</td> <td>    1.442</td> <td>   -2.426</td> <td> 0.016</td> <td>   -6.349</td> <td>   -0.651</td>
+</tr>
+<tr>
+  <th>x3</th>    <td>    3.0000</td> <td>    1.442</td> <td>    2.080</td> <td> 0.039</td> <td>    0.151</td> <td>    5.849</td>
+</tr>
+<tr>
+  <th>x4</th>    <td>   -3.0000</td> <td>    1.442</td> <td>   -2.080</td> <td> 0.039</td> <td>   -5.849</td> <td>   -0.151</td>
+</tr>
+<tr>
+  <th>x5</th>    <td>   -1.7500</td> <td>    1.442</td> <td>   -1.213</td> <td> 0.227</td> <td>   -4.599</td> <td>    1.099</td>
+</tr>
+<tr>
+  <th>x6</th>    <td>   -1.7500</td> <td>    1.442</td> <td>   -1.213</td> <td> 0.227</td> <td>   -4.599</td> <td>    1.099</td>
+</tr>
+<tr>
+  <th>x7</th>    <td>   -5.2500</td> <td>    1.442</td> <td>   -3.640</td> <td> 0.000</td> <td>   -8.099</td> <td>   -2.401</td>
+</tr>
+<tr>
+  <th>x8</th>    <td>   -1.5000</td> <td>    1.442</td> <td>   -1.040</td> <td> 0.300</td> <td>   -4.349</td> <td>    1.349</td>
+</tr>
+<tr>
+  <th>x9</th>    <td>    3.5000</td> <td>    1.442</td> <td>    2.426</td> <td> 0.016</td> <td>    0.651</td> <td>    6.349</td>
+</tr>
+<tr>
+  <th>x10</th>   <td>    0.7500</td> <td>    1.442</td> <td>    0.520</td> <td> 0.604</td> <td>   -2.099</td> <td>    3.599</td>
+</tr>
+<tr>
+  <th>x11</th>   <td>   -3.0000</td> <td>    1.442</td> <td>   -2.080</td> <td> 0.039</td> <td>   -5.849</td> <td>   -0.151</td>
+</tr>
+<tr>
+  <th>x12</th>   <td>   -1.2500</td> <td>    1.442</td> <td>   -0.867</td> <td> 0.387</td> <td>   -4.099</td> <td>    1.599</td>
+</tr>
+<tr>
+  <th>x13</th>   <td>    0.2500</td> <td>    1.442</td> <td>    0.173</td> <td> 0.863</td> <td>   -2.599</td> <td>    3.099</td>
+</tr>
+<tr>
+  <th>x14</th>   <td>   -3.5000</td> <td>    1.442</td> <td>   -2.426</td> <td> 0.016</td> <td>   -6.349</td> <td>   -0.651</td>
+</tr>
+<tr>
+  <th>x15</th>   <td>   -2.5000</td> <td>    1.442</td> <td>   -1.733</td> <td> 0.085</td> <td>   -5.349</td> <td>    0.349</td>
+</tr>
+<tr>
+  <th>x16</th>   <td>    0.2500</td> <td>    1.442</td> <td>    0.173</td> <td> 0.863</td> <td>   -2.599</td> <td>    3.099</td>
+</tr>
+<tr>
+  <th>x17</th>   <td>   -2.0000</td> <td>    1.442</td> <td>   -1.387</td> <td> 0.168</td> <td>   -4.849</td> <td>    0.849</td>
+</tr>
+<tr>
+  <th>x18</th>   <td>   -3.2500</td> <td>    1.442</td> <td>   -2.253</td> <td> 0.026</td> <td>   -6.099</td> <td>   -0.401</td>
+</tr>
+<tr>
+  <th>x19</th>   <td>   -1.0000</td> <td>    1.442</td> <td>   -0.693</td> <td> 0.489</td> <td>   -3.849</td> <td>    1.849</td>
+</tr>
+<tr>
+  <th>x20</th>   <td>   -0.5000</td> <td>    1.442</td> <td>   -0.347</td> <td> 0.729</td> <td>   -3.349</td> <td>    2.349</td>
+</tr>
+<tr>
+  <th>x21</th>   <td>   -2.7500</td> <td>    1.442</td> <td>   -1.906</td> <td> 0.058</td> <td>   -5.599</td> <td>    0.099</td>
+</tr>
+<tr>
+  <th>x22</th>   <td>   -3.0000</td> <td>    1.442</td> <td>   -2.080</td> <td> 0.039</td> <td>   -5.849</td> <td>   -0.151</td>
+</tr>
+<tr>
+  <th>x23</th>   <td>   -2.5000</td> <td>    1.442</td> <td>   -1.733</td> <td> 0.085</td> <td>   -5.349</td> <td>    0.349</td>
+</tr>
+<tr>
+  <th>x24</th>   <td>   -2.5000</td> <td>    1.442</td> <td>   -1.733</td> <td> 0.085</td> <td>   -5.349</td> <td>    0.349</td>
+</tr>
+<tr>
+  <th>x25</th>   <td>   -1.5000</td> <td>    1.442</td> <td>   -1.040</td> <td> 0.300</td> <td>   -4.349</td> <td>    1.349</td>
+</tr>
+<tr>
+  <th>x26</th>   <td>    0.7500</td> <td>    1.442</td> <td>    0.520</td> <td> 0.604</td> <td>   -2.099</td> <td>    3.599</td>
+</tr>
+<tr>
+  <th>x27</th>   <td>   -3.7500</td> <td>    1.442</td> <td>   -2.600</td> <td> 0.010</td> <td>   -6.599</td> <td>   -0.901</td>
+</tr>
+<tr>
+  <th>x28</th>   <td>   -3.5000</td> <td>    1.442</td> <td>   -2.426</td> <td> 0.016</td> <td>   -6.349</td> <td>   -0.651</td>
+</tr>
+<tr>
+  <th>x29</th>   <td>   -2.0000</td> <td>    1.442</td> <td>   -1.387</td> <td> 0.168</td> <td>   -4.849</td> <td>    0.849</td>
+</tr>
+<tr>
+  <th>x30</th>   <td>   -0.2500</td> <td>    1.442</td> <td>   -0.173</td> <td> 0.863</td> <td>   -3.099</td> <td>    2.599</td>
+</tr>
+<tr>
+  <th>x31</th>   <td>   -2.2500</td> <td>    1.442</td> <td>   -1.560</td> <td> 0.121</td> <td>   -5.099</td> <td>    0.599</td>
+</tr>
+<tr>
+  <th>x32</th>   <td>   -2.5000</td> <td>    1.442</td> <td>   -1.733</td> <td> 0.085</td> <td>   -5.349</td> <td>    0.349</td>
+</tr>
+<tr>
+  <th>x33</th>   <td>   -3.0000</td> <td>    1.442</td> <td>   -2.080</td> <td> 0.039</td> <td>   -5.849</td> <td>   -0.151</td>
+</tr>
+<tr>
+  <th>x34</th>   <td>   -1.0000</td> <td>    1.442</td> <td>   -0.693</td> <td> 0.489</td> <td>   -3.849</td> <td>    1.849</td>
+</tr>
+<tr>
+  <th>x35</th>   <td>   -4.7500</td> <td>    1.442</td> <td>   -3.293</td> <td> 0.001</td> <td>   -7.599</td> <td>   -1.901</td>
+</tr>
+<tr>
+  <th>x36</th>   <td>   -2.2500</td> <td>    1.442</td> <td>   -1.560</td> <td> 0.121</td> <td>   -5.099</td> <td>    0.599</td>
+</tr>
+<tr>
+  <th>x37</th>   <td>   -2.5000</td> <td>    1.442</td> <td>   -1.733</td> <td> 0.085</td> <td>   -5.349</td> <td>    0.349</td>
+</tr>
+<tr>
+  <th>x38</th>   <td>   -2.2500</td> <td>    1.442</td> <td>   -1.560</td> <td> 0.121</td> <td>   -5.099</td> <td>    0.599</td>
+</tr>
+<tr>
+  <th>x39</th>   <td>   -1.5000</td> <td>    1.442</td> <td>   -1.040</td> <td> 0.300</td> <td>   -4.349</td> <td>    1.349</td>
+</tr>
+<tr>
+  <th>x40</th>   <td>   -2.5000</td> <td>    1.442</td> <td>   -1.733</td> <td> 0.085</td> <td>   -5.349</td> <td>    0.349</td>
+</tr>
+<tr>
+  <th>x41</th>   <td>   -2.5000</td> <td>    1.442</td> <td>   -1.733</td> <td> 0.085</td> <td>   -5.349</td> <td>    0.349</td>
+</tr>
+<tr>
+  <th>x42</th>   <td>   -1.7500</td> <td>    1.442</td> <td>   -1.213</td> <td> 0.227</td> <td>   -4.599</td> <td>    1.099</td>
+</tr>
+<tr>
+  <th>x43</th>   <td>   -2.0000</td> <td>    1.442</td> <td>   -1.387</td> <td> 0.168</td> <td>   -4.849</td> <td>    0.849</td>
+</tr>
+<tr>
+  <th>x44</th>   <td>   -3.7500</td> <td>    1.442</td> <td>   -2.600</td> <td> 0.010</td> <td>   -6.599</td> <td>   -0.901</td>
+</tr>
+<tr>
+  <th>x45</th>   <td>    1.7500</td> <td>    1.442</td> <td>    1.213</td> <td> 0.227</td> <td>   -1.099</td> <td>    4.599</td>
+</tr>
+<tr>
+  <th>x46</th>   <td>   -1.0000</td> <td>    1.442</td> <td>   -0.693</td> <td> 0.489</td> <td>   -3.849</td> <td>    1.849</td>
+</tr>
+<tr>
+  <th>x47</th>   <td>   -0.5000</td> <td>    1.442</td> <td>   -0.347</td> <td> 0.729</td> <td>   -3.349</td> <td>    2.349</td>
+</tr>
+<tr>
+  <th>x48</th>   <td>   -4.2500</td> <td>    1.442</td> <td>   -2.946</td> <td> 0.004</td> <td>   -7.099</td> <td>   -1.401</td>
+</tr>
+<tr>
+  <th>x49</th>   <td>   -0.5000</td> <td>    1.442</td> <td>   -0.347</td> <td> 0.729</td> <td>   -3.349</td> <td>    2.349</td>
+</tr>
+<tr>
+  <th>x50</th>   <td>   -0.7500</td> <td>    1.442</td> <td>   -0.520</td> <td> 0.604</td> <td>   -3.599</td> <td>    2.099</td>
+</tr>
+<tr>
+  <th>x51</th>   <td>   -0.7500</td> <td>    1.442</td> <td>   -0.520</td> <td> 0.604</td> <td>   -3.599</td> <td>    2.099</td>
+</tr>
+<tr>
+  <th>x52</th>   <td>   -2.5000</td> <td>    1.442</td> <td>   -1.733</td> <td> 0.085</td> <td>   -5.349</td> <td>    0.349</td>
+</tr>
+<tr>
+  <th>x53</th>   <td>    0.2500</td> <td>    1.442</td> <td>    0.173</td> <td> 0.863</td> <td>   -2.599</td> <td>    3.099</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Omnibus:</th>       <td> 6.335</td> <th>  Durbin-Watson:     </th> <td>   1.739</td>
+</tr>
+<tr>
+  <th>Prob(Omnibus):</th> <td> 0.042</td> <th>  Jarque-Bera (JB):  </th> <td>   6.673</td>
+</tr>
+<tr>
+  <th>Skew:</th>          <td>-0.294</td> <th>  Prob(JB):          </th> <td>  0.0356</td>
+</tr>
+<tr>
+  <th>Kurtosis:</th>      <td> 3.639</td> <th>  Cond. No.          </th> <td>1.81e+06</td>
+</tr>
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<br/>[2] The condition number is large, 1.81e+06. This might indicate that there are<br/>strong multicollinearity or other numerical problems.
+</div>
+</div>
+<div class="cell code" data-execution_count="134">
+<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create statsmodel for reading data</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>predict_reading <span class="op">=</span> sm.OLS(trainer[<span class="st">&#39;READING_CHANGE&#39;</span>].tolist(), sm.add_constant(X_reading)).fit()</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>predict_reading.summary()</span></code></pre></div>
+<div class="output execute_result" data-execution_count="134">
+<table class="simpletable">
+<caption>OLS Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th>            <td>y</td>        <th>  R-squared:         </th> <td>   0.511</td>
+</tr>
+<tr>
+  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared:    </th> <td>   0.347</td>
+</tr>
+<tr>
+  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   3.113</td>
+</tr>
+<tr>
+  <th>Date:</th>             <td>Thu, 08 Dec 2022</td> <th>  Prob (F-statistic):</th> <td>2.28e-08</td>
+</tr>
+<tr>
+  <th>Time:</th>                 <td>02:36:48</td>     <th>  Log-Likelihood:    </th> <td> -394.27</td>
+</tr>
+<tr>
+  <th>No. Observations:</th>      <td>   212</td>      <th>  AIC:               </th> <td>   896.5</td>
+</tr>
+<tr>
+  <th>Df Residuals:</th>          <td>   158</td>      <th>  BIC:               </th> <td>   1078.</td>
+</tr>
+<tr>
+  <th>Df Model:</th>              <td>    53</td>      <th>                     </th>     <td> </td>   
+</tr>
+<tr>
+  <th>Covariance Type:</th>      <td>nonrobust</td>    <th>                     </th>     <td> </td>   
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+    <td></td>       <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>const</th> <td> -687.0151</td> <td>  111.242</td> <td>   -6.176</td> <td> 0.000</td> <td> -906.729</td> <td> -467.301</td>
+</tr>
+<tr>
+  <th>x1</th>    <td>    0.3425</td> <td>    0.055</td> <td>    6.194</td> <td> 0.000</td> <td>    0.233</td> <td>    0.452</td>
+</tr>
+<tr>
+  <th>x2</th>    <td>   -2.7500</td> <td>    1.273</td> <td>   -2.161</td> <td> 0.032</td> <td>   -5.264</td> <td>   -0.236</td>
+</tr>
+<tr>
+  <th>x3</th>    <td>    0.5000</td> <td>    1.273</td> <td>    0.393</td> <td> 0.695</td> <td>   -2.014</td> <td>    3.014</td>
+</tr>
+<tr>
+  <th>x4</th>    <td>   -0.5000</td> <td>    1.273</td> <td>   -0.393</td> <td> 0.695</td> <td>   -3.014</td> <td>    2.014</td>
+</tr>
+<tr>
+  <th>x5</th>    <td>   -0.2500</td> <td>    1.273</td> <td>   -0.196</td> <td> 0.845</td> <td>   -2.764</td> <td>    2.264</td>
+</tr>
+<tr>
+  <th>x6</th>    <td>   -3.0000</td> <td>    1.273</td> <td>   -2.357</td> <td> 0.020</td> <td>   -5.514</td> <td>   -0.486</td>
+</tr>
+<tr>
+  <th>x7</th>    <td>   -2.2500</td> <td>    1.273</td> <td>   -1.768</td> <td> 0.079</td> <td>   -4.764</td> <td>    0.264</td>
+</tr>
+<tr>
+  <th>x8</th>    <td>   -2.7500</td> <td>    1.273</td> <td>   -2.161</td> <td> 0.032</td> <td>   -5.264</td> <td>   -0.236</td>
+</tr>
+<tr>
+  <th>x9</th>    <td>    1.2500</td> <td>    1.273</td> <td>    0.982</td> <td> 0.328</td> <td>   -1.264</td> <td>    3.764</td>
+</tr>
+<tr>
+  <th>x10</th>   <td>    0.7500</td> <td>    1.273</td> <td>    0.589</td> <td> 0.557</td> <td>   -1.764</td> <td>    3.264</td>
+</tr>
+<tr>
+  <th>x11</th>   <td>   -1.7500</td> <td>    1.273</td> <td>   -1.375</td> <td> 0.171</td> <td>   -4.264</td> <td>    0.764</td>
+</tr>
+<tr>
+  <th>x12</th>   <td>    0.7500</td> <td>    1.273</td> <td>    0.589</td> <td> 0.557</td> <td>   -1.764</td> <td>    3.264</td>
+</tr>
+<tr>
+  <th>x13</th>   <td>    0.7500</td> <td>    1.273</td> <td>    0.589</td> <td> 0.557</td> <td>   -1.764</td> <td>    3.264</td>
+</tr>
+<tr>
+  <th>x14</th>   <td>   -2.2500</td> <td>    1.273</td> <td>   -1.768</td> <td> 0.079</td> <td>   -4.764</td> <td>    0.264</td>
+</tr>
+<tr>
+  <th>x15</th>   <td>   -1.2500</td> <td>    1.273</td> <td>   -0.982</td> <td> 0.328</td> <td>   -3.764</td> <td>    1.264</td>
+</tr>
+<tr>
+  <th>x16</th>   <td>   -1.0000</td> <td>    1.273</td> <td>   -0.786</td> <td> 0.433</td> <td>   -3.514</td> <td>    1.514</td>
+</tr>
+<tr>
+  <th>x17</th>   <td>   -0.5000</td> <td>    1.273</td> <td>   -0.393</td> <td> 0.695</td> <td>   -3.014</td> <td>    2.014</td>
+</tr>
+<tr>
+  <th>x18</th>   <td>   -3.0000</td> <td>    1.273</td> <td>   -2.357</td> <td> 0.020</td> <td>   -5.514</td> <td>   -0.486</td>
+</tr>
+<tr>
+  <th>x19</th>   <td>   -2.2500</td> <td>    1.273</td> <td>   -1.768</td> <td> 0.079</td> <td>   -4.764</td> <td>    0.264</td>
+</tr>
+<tr>
+  <th>x20</th>   <td>    1.7500</td> <td>    1.273</td> <td>    1.375</td> <td> 0.171</td> <td>   -0.764</td> <td>    4.264</td>
+</tr>
+<tr>
+  <th>x21</th>   <td>   -2.2500</td> <td>    1.273</td> <td>   -1.768</td> <td> 0.079</td> <td>   -4.764</td> <td>    0.264</td>
+</tr>
+<tr>
+  <th>x22</th>   <td> 1.344e-12</td> <td>    1.273</td> <td> 1.06e-12</td> <td> 1.000</td> <td>   -2.514</td> <td>    2.514</td>
+</tr>
+<tr>
+  <th>x23</th>   <td>   -1.5000</td> <td>    1.273</td> <td>   -1.178</td> <td> 0.240</td> <td>   -4.014</td> <td>    1.014</td>
+</tr>
+<tr>
+  <th>x24</th>   <td>   -2.5000</td> <td>    1.273</td> <td>   -1.964</td> <td> 0.051</td> <td>   -5.014</td> <td>    0.014</td>
+</tr>
+<tr>
+  <th>x25</th>   <td>   -1.2500</td> <td>    1.273</td> <td>   -0.982</td> <td> 0.328</td> <td>   -3.764</td> <td>    1.264</td>
+</tr>
+<tr>
+  <th>x26</th>   <td>   -2.2500</td> <td>    1.273</td> <td>   -1.768</td> <td> 0.079</td> <td>   -4.764</td> <td>    0.264</td>
+</tr>
+<tr>
+  <th>x27</th>   <td>   -3.7500</td> <td>    1.273</td> <td>   -2.946</td> <td> 0.004</td> <td>   -6.264</td> <td>   -1.236</td>
+</tr>
+<tr>
+  <th>x28</th>   <td>   -2.5000</td> <td>    1.273</td> <td>   -1.964</td> <td> 0.051</td> <td>   -5.014</td> <td>    0.014</td>
+</tr>
+<tr>
+  <th>x29</th>   <td>   -1.2500</td> <td>    1.273</td> <td>   -0.982</td> <td> 0.328</td> <td>   -3.764</td> <td>    1.264</td>
+</tr>
+<tr>
+  <th>x30</th>   <td>   -1.0000</td> <td>    1.273</td> <td>   -0.786</td> <td> 0.433</td> <td>   -3.514</td> <td>    1.514</td>
+</tr>
+<tr>
+  <th>x31</th>   <td> 1.347e-12</td> <td>    1.273</td> <td> 1.06e-12</td> <td> 1.000</td> <td>   -2.514</td> <td>    2.514</td>
+</tr>
+<tr>
+  <th>x32</th>   <td>   -0.2500</td> <td>    1.273</td> <td>   -0.196</td> <td> 0.845</td> <td>   -2.764</td> <td>    2.264</td>
+</tr>
+<tr>
+  <th>x33</th>   <td>   -1.5000</td> <td>    1.273</td> <td>   -1.178</td> <td> 0.240</td> <td>   -4.014</td> <td>    1.014</td>
+</tr>
+<tr>
+  <th>x34</th>   <td>   -2.7500</td> <td>    1.273</td> <td>   -2.161</td> <td> 0.032</td> <td>   -5.264</td> <td>   -0.236</td>
+</tr>
+<tr>
+  <th>x35</th>   <td>   -2.7500</td> <td>    1.273</td> <td>   -2.161</td> <td> 0.032</td> <td>   -5.264</td> <td>   -0.236</td>
+</tr>
+<tr>
+  <th>x36</th>   <td>    1.0000</td> <td>    1.273</td> <td>    0.786</td> <td> 0.433</td> <td>   -1.514</td> <td>    3.514</td>
+</tr>
+<tr>
+  <th>x37</th>   <td>   -2.7500</td> <td>    1.273</td> <td>   -2.161</td> <td> 0.032</td> <td>   -5.264</td> <td>   -0.236</td>
+</tr>
+<tr>
+  <th>x38</th>   <td>   -2.5000</td> <td>    1.273</td> <td>   -1.964</td> <td> 0.051</td> <td>   -5.014</td> <td>    0.014</td>
+</tr>
+<tr>
+  <th>x39</th>   <td>   -1.2500</td> <td>    1.273</td> <td>   -0.982</td> <td> 0.328</td> <td>   -3.764</td> <td>    1.264</td>
+</tr>
+<tr>
+  <th>x40</th>   <td>   -1.7500</td> <td>    1.273</td> <td>   -1.375</td> <td> 0.171</td> <td>   -4.264</td> <td>    0.764</td>
+</tr>
+<tr>
+  <th>x41</th>   <td> 1.345e-12</td> <td>    1.273</td> <td> 1.06e-12</td> <td> 1.000</td> <td>   -2.514</td> <td>    2.514</td>
+</tr>
+<tr>
+  <th>x42</th>   <td>   -1.7500</td> <td>    1.273</td> <td>   -1.375</td> <td> 0.171</td> <td>   -4.264</td> <td>    0.764</td>
+</tr>
+<tr>
+  <th>x43</th>   <td>   -2.2500</td> <td>    1.273</td> <td>   -1.768</td> <td> 0.079</td> <td>   -4.764</td> <td>    0.264</td>
+</tr>
+<tr>
+  <th>x44</th>   <td>   -4.0000</td> <td>    1.273</td> <td>   -3.143</td> <td> 0.002</td> <td>   -6.514</td> <td>   -1.486</td>
+</tr>
+<tr>
+  <th>x45</th>   <td>   -1.2500</td> <td>    1.273</td> <td>   -0.982</td> <td> 0.328</td> <td>   -3.764</td> <td>    1.264</td>
+</tr>
+<tr>
+  <th>x46</th>   <td>   -3.0000</td> <td>    1.273</td> <td>   -2.357</td> <td> 0.020</td> <td>   -5.514</td> <td>   -0.486</td>
+</tr>
+<tr>
+  <th>x47</th>   <td>    1.0000</td> <td>    1.273</td> <td>    0.786</td> <td> 0.433</td> <td>   -1.514</td> <td>    3.514</td>
+</tr>
+<tr>
+  <th>x48</th>   <td>   -2.5000</td> <td>    1.273</td> <td>   -1.964</td> <td> 0.051</td> <td>   -5.014</td> <td>    0.014</td>
+</tr>
+<tr>
+  <th>x49</th>   <td>   -1.2500</td> <td>    1.273</td> <td>   -0.982</td> <td> 0.328</td> <td>   -3.764</td> <td>    1.264</td>
+</tr>
+<tr>
+  <th>x50</th>   <td>    0.2500</td> <td>    1.273</td> <td>    0.196</td> <td> 0.845</td> <td>   -2.264</td> <td>    2.764</td>
+</tr>
+<tr>
+  <th>x51</th>   <td>   -2.0000</td> <td>    1.273</td> <td>   -1.571</td> <td> 0.118</td> <td>   -4.514</td> <td>    0.514</td>
+</tr>
+<tr>
+  <th>x52</th>   <td>   -0.7500</td> <td>    1.273</td> <td>   -0.589</td> <td> 0.557</td> <td>   -3.264</td> <td>    1.764</td>
+</tr>
+<tr>
+  <th>x53</th>   <td>    0.2500</td> <td>    1.273</td> <td>    0.196</td> <td> 0.845</td> <td>   -2.264</td> <td>    2.764</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Omnibus:</th>       <td> 6.181</td> <th>  Durbin-Watson:     </th> <td>   2.013</td>
+</tr>
+<tr>
+  <th>Prob(Omnibus):</th> <td> 0.045</td> <th>  Jarque-Bera (JB):  </th> <td>   9.162</td>
+</tr>
+<tr>
+  <th>Skew:</th>          <td> 0.103</td> <th>  Prob(JB):          </th> <td>  0.0102</td>
+</tr>
+<tr>
+  <th>Kurtosis:</th>      <td> 3.997</td> <th>  Cond. No.          </th> <td>1.81e+06</td>
+</tr>
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<br/>[2] The condition number is large, 1.81e+06. This might indicate that there are<br/>strong multicollinearity or other numerical problems.
+</div>
+</div>
+<div class="cell markdown">
+<p>We can look at the P&gt;|t| column in the summary table, which indicates the p-values of the coefficients. If the p-value of a coefficient is greater than 0.05, we can consider it to be statistically significant and conclude that it has a significant effect on the predicted value.</p>
+</div>
+<div class="cell code" data-execution_count="135">
+<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># accumulate constant names</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>const_names <span class="op">=</span> trainer.columns[<span class="dv">3</span>:].tolist()</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>const_names.insert(<span class="dv">0</span>, <span class="st">&#39;YEAR&#39;</span>)</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>math_significant <span class="op">=</span> []</span></code></pre></div>
+</div>
+<div class="cell markdown">
+<p>Iterate through p values and if less than 0.05 add to math_significant</p>
+</div>
+<div class="cell code" data-execution_count="136">
+<div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(predict_math.pvalues) <span class="op">-</span> <span class="dv">1</span>):</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> predict_math.pvalues[i <span class="op">+</span> <span class="dv">1</span>] <span class="op">&lt;</span> <span class="fl">0.05</span>:</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>        math_significant.append(const_names[i])</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Math Constraints Tested: : &quot;</span> <span class="op">+</span> <span class="bu">str</span>(math_significant))</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>Math Constraints Tested: : [&#39;YEAR&#39;, &#39;STATE_ALASKA&#39;, &#39;STATE_ARIZONA&#39;, &#39;STATE_ARKANSAS&#39;, &#39;STATE_CONNECTICUT&#39;, &#39;STATE_DISTRICT_OF_COLUMBIA&#39;, &#39;STATE_FLORIDA&#39;, &#39;STATE_IDAHO&#39;, &#39;STATE_KANSAS&#39;, &#39;STATE_MARYLAND&#39;, &#39;STATE_MISSOURI&#39;, &#39;STATE_MONTANA&#39;, &#39;STATE_NEW_JERSEY&#39;, &#39;STATE_NEW_YORK&#39;, &#39;STATE_SOUTH_DAKOTA&#39;, &#39;STATE_VERMONT&#39;]
+</code></pre>
+</div>
+</div>
+<div class="cell markdown">
+<p>Iterate through p values and if less than 0.05 add to reading_significant</p>
+</div>
+<div class="cell code" data-execution_count="137">
+<div class="sourceCode" id="cb31"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>reading_significant <span class="op">=</span> []</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(predict_reading.pvalues) <span class="op">-</span> <span class="dv">1</span>):</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> predict_reading.pvalues[i <span class="op">+</span> <span class="dv">1</span>] <span class="op">&lt;</span> <span class="fl">0.05</span>:</span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>        reading_significant.append(const_names[i])</span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Reading Constraints Tested: &quot;</span> <span class="op">+</span> <span class="bu">str</span>(reading_significant))</span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>Reading Constraints Tested: [&#39;YEAR&#39;, &#39;STATE_ALASKA&#39;, &#39;STATE_COLORADO&#39;, &#39;STATE_DELAWARE&#39;, &#39;STATE_KANSAS&#39;, &#39;STATE_MISSOURI&#39;, &#39;STATE_NEW_MEXICO&#39;, &#39;STATE_NEW_YORK&#39;, &#39;STATE_NORTH_DAKOTA&#39;, &#39;STATE_SOUTH_DAKOTA&#39;, &#39;STATE_TEXAS&#39;]
+
+</code></pre>
+</div>
+</div>
+<div class="cell markdown">
+<p>Checks MATH p-values and coffeficients from the regression model and prints out that specific states name</p>
+</div>
+<div class="cell code" data-execution_count="140">
+<div class="sourceCode" id="cb33"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Predicted Negative Growth in Math:&quot;</span>)</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(math_regression.coef_)):</span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(i <span class="op">&gt;</span> <span class="dv">1</span>):</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> math_regression.coef_[i] <span class="op">&lt;</span> <span class="dv">0</span> <span class="kw">and</span> predict_math.pvalues[i <span class="op">+</span> <span class="dv">1</span>] <span class="op">&lt;</span> <span class="fl">0.05</span>:</span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(const_names[i])</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>Predicted Negative Growth in Math:
+STATE_ARKANSAS
+STATE_CONNECTICUT
+STATE_FLORIDA
+STATE_IDAHO
+STATE_KANSAS
+STATE_MARYLAND
+STATE_MISSOURI
+STATE_MONTANA
+STATE_NEW_JERSEY
+STATE_NEW_YORK
+STATE_SOUTH_DAKOTA
+STATE_VERMONT
+</code></pre>
+</div>
+</div>
+<div class="cell markdown">
+<p>Checks READING p-values and coffeficients from the regression model and prints out that specific states name</p>
+</div>
+<div class="cell code" data-execution_count="141">
+<div class="sourceCode" id="cb35"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Predicted Negative Growth in Reading:&quot;</span>)</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(reading_regression.coef_)):</span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(i <span class="op">&gt;</span> <span class="dv">1</span>):</span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> reading_regression.coef_[i] <span class="op">&lt;</span> <span class="dv">0</span> <span class="kw">and</span> predict_reading.pvalues[i <span class="op">+</span> <span class="dv">1</span>] <span class="op">&lt;</span> <span class="fl">0.05</span>:</span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(const_names[i])</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>Predicted Negative Growth in Reading:
+STATE_COLORADO
+STATE_DELAWARE
+STATE_KANSAS
+STATE_MISSOURI
+STATE_NEW_MEXICO
+STATE_NEW_YORK
+STATE_NORTH_DAKOTA
+STATE_SOUTH_DAKOTA
+STATE_TEXAS
+</code></pre>
+</div>
+</div>
+<div class="cell markdown">
+<p>Based on the data, a number of states appear to have both a negative coefficient and a low p value above 0.05, suggesting that they are predicted to have significant decreases in the average scores for 4th graders on the NAEP test in both reading and writing. It is notable that 19 states seem to have significant predicted negative growth in their average math and reading scores for 4th graders. Some of these states include Maine and California, which have traditionally performed well in these areas.</p>
+</div>
+<section id="part-5---conclusion" class="cell markdown">
+<h2>Part 5 - Conclusion</h2>
+<p>Our definition of growth in math and reading literacy is an increase in average test scores for 4th graders on the NAEP test from 2009 to a future year. We wanted to investigate how state influence education standards in these subjects. Our growth metric for different groups within the population, taking into account state interactions, shows that both math and reading literacy are affected by state. This indicates that education inequality has persisted since 2009, as our growth metric varies significantly depending on the state of the student. It's important to note that this dataset also obscures people outside of the male/female classification, which may not accurately represent their experiences in the American education system.</p>
+<p>Our predictive models, based on state, show that the state where a student lives plays a role in determining their growth in math and reading literacy. States in the Midwest such as Arkansas, Indiana, and Colorado, show students are predicted to have negative growth in these subjects. This is supported by our p-values for these states being below 0.05, which means that we can be 95% confident that there is a relationship between state and literacy growth. This indicates that education inequality persists across the US, with some states experiencing more or less growth than others. This may be because these states are more rural, which can limit access to educational opportunities. This type of analysis can be useful when developing curriculum policies, such as common core, because there are significant differences in the quality of education across the US. If students in a particular state are predicted to have negative growth in math and reading, specific policies can be implemented to improve their education.</p>
+<p>We hope that these models and our exploratory data analysis can be used by policymakers to identify which states and which demographics within states need more support in developing math and reading curriculum and hiring educators. State within state play a role in math and reading literacy, and changes need to be made to provide equitable education to all.</p>
+</section>
+</body>
+</html>
